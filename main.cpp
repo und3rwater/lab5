@@ -7,14 +7,33 @@ using namespace std;
 
 vector<string> ReadFile(const string& filename) // считывание из файла набор строк в вектор функция № 1
 {
-
+    vector<string> lines;
     return lines;
 }
 
 
-void DisplayFile(const vector<string>& lines) // вывод строк на экран (функция № 2)
+void DisplayFile(const vector<string>& lines)
 {
+    /*
+    vector<string> tLines =
+    {
+        "FIRST",
+        "SECOND",
+        "THIRD",
+        " ",
+        "LAST"
+    };
 
+    for (auto& line : tLines)
+    {
+        cout << line << endl;
+    }
+*/
+
+    for (auto& line : lines)
+    {
+        cout << line << endl;
+    }
 }
 
 void FileOut(const vector<string>& lines, const string& filename) // запись в файл (функция № 3)
