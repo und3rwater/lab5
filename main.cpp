@@ -13,22 +13,6 @@ vector<string> ReadFile(const string& filename) // считывание из файла набор стр
 
 void DisplayFile(const vector<string>& lines) // вывод строк на экран (функция № 2)
 {
-    /*
-    vector<string> tLines =
-    {
-        "FIRST",
-        "SECOND",
-        "THIRD",
-        " ",
-        "LAST"
-    };
-
-    for (auto& line : tLines)
-    {
-        cout << line << endl;
-    }
-*/
-
     for (auto& line : lines)
     {
         cout << line << endl;
@@ -37,30 +21,12 @@ void DisplayFile(const vector<string>& lines) // вывод строк на экран (функция №
 
 void FileOut(const vector<string>& lines, const string& filename) // запись в файл (функция № 3)
 {
-    /*
-    vector<string> tData =
-    {
-        "FIRST!",
-        "SECOND!",
-        "THIRD!",
-        " ",
-        "LAST!"
-    };
-    */
-
     ofstream out(filename);
     if(!out)
     {
         cout << "error" << endl;
         return;
     }
-
-    /*
-    for (const auto& line : tData)
-    {
-        out << line << endl;
-    }
-    */
 
     for (const auto& line : lines)
     {
