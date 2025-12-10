@@ -2,3 +2,6 @@
 obj/
 bin/
 *layout
+
+output.txt
+input.txt
