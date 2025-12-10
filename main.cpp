@@ -21,14 +21,6 @@ vector<string> ReadFile(const string& filename) // считывание из файла набор стр
     }
     file.close();
 
-/*
-    cout << lines.size() << endl;
-    for(size_t i = 0; i < lines.size(); i++)
-        {
-            cout << "stroka " << i+1 << ": " << lines[i] << endl;
-        }
-*/
-
     return lines;
 }
 
