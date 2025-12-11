@@ -5,7 +5,7 @@
 
 using namespace std;
 
-vector<string> ReadFile(const string& filename) // считывание из файла набор строк в вектор функция № 1
+vector<string> ReadFile(const string& filename) // Г±Г·ГЁГІГ»ГўГ Г­ГЁГҐ ГЁГ§ ГґГ Г©Г«Г  Г­Г ГЎГ®Г° Г±ГІГ°Г®ГЄ Гў ГўГҐГЄГІГ®Г° ГґГіГ­ГЄГ¶ГЁГї В№ 1
 {
     ifstream file(filename);
     vector<string> lines;
@@ -24,15 +24,28 @@ vector<string> ReadFile(const string& filename) // считывание из файла набор стр
     return lines;
 }
 
-
-void DisplayFile(const vector<string>& lines) // вывод строк на экран (функция № 2)
+void DisplayFile(const vector<string>& lines) // ГўГ»ГўГ®Г¤ Г±ГІГ°Г®ГЄ Г­Г  ГЅГЄГ°Г Г­ (ГґГіГ­ГЄГ¶ГЁГї В№ 2)
 {
-
+    for (auto& line : lines)
+    {
+        cout << line << endl;
+    }
 }
 
-void FileOut(const vector<string>& lines, const string& filename) // запись в файл (функция № 3)
+void FileOut(const vector<string>& lines, const string& filename) // Г§Г ГЇГЁГ±Гј Гў ГґГ Г©Г« (ГґГіГ­ГЄГ¶ГЁГї В№ 3)
 {
+    ofstream out(filename);
+    if(!out)
+    {
+        cout << "error" << endl;
+        return;
+    }
 
+    for (const auto& line : lines)
+    {
+        out << line << endl;
+    }
+    out.close();
 }
 
 int main()
