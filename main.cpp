@@ -7,6 +7,19 @@ using namespace std;
 
 vector<string> ReadFile(const string& filename) // считывание из файла набор строк в вектор функция № 1
 {
+    ifstream file(filename);
+    vector<string> lines;
+    if(!file)
+    {
+        cout << "Error" << endl;
+        return lines;
+    }
+    string line;
+    while(getline(file, line))
+    {
+        lines.push_back(line);
+    }
+    file.close();
 
     return lines;
 }
